@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    background:hsl(0, 100%, 98%);
+}
+.logo {
+    padding: 30px 0 30px 30px;
+}
+.logo img {
+    width: 100px;
+    height: auto;
+}
+#desktop {
+    display: none;
+}
+/*
+.image {
+    max-width: 100vw;
+    display: block;
+    height: auto;
+} */
+#mobile {
+    display: block;
+    width: 100vw;
+    height: auto;
+}
+
+.main-text {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    text-align: center;
+}
+span, p {
+    color: hsl(0, 36%, 70%);
+}
+h1 {
+    line-height: 1em;
+    letter-spacing: 10px;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+p {
+    padding-bottom: 15px;
+    line-height: 1.5em;
+}
+form {
+    position: relative;
+    margin: 10px 0px;
+}
+input {
+    height: 50px;
+    border-radius: 25px;
+    padding-left: 20px;
+    width: 100%;
+    border: 1px solid hsl(0, 80%, 86%);
+}
+.arrow {
+    position: absolute;
+    height: 50px;
+    width: 22%;
+    border: none;
+    background: linear-gradient(to right,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    border-radius: 25px;
+    right: 0;
+    top: 0;
+}
+button:hover { 
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    background: hsl(0, 80%, 86%);
+}
+#error-icon {
+    position: absolute;
+    height: 20px;
+    right: 24%;
+    top: 15px;
+    display: none;
+}
+
+@media only screen and (min-width: 450px) {
+    body {
+        background: url("./images/bg-pattern-desktop.svg");
+        background-position: cover;
+        max-height: 100vh;
+    }
+    .logo {
+        position: absolute;
+        top: 5vh;
+        left: 10vw;
+        padding: 0;
+    }
+    main {
+        display: flex;
+        justify-content: space-between;
+        height: 100vh;
+    }
+    #mobile {
+        display: none;
+    }
+    .image {
+        order: 2;
+        width: 50%;
+        position: relative;
+    }
+    #desktop {
+        display: block;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+    }
+    .main-text {
+        order: 1;
+        text-align: left;
+        width: 40%;
+        margin: 25vh 5vw 20vh 10vw;
+    }
+    form {
+        margin: 10px 0px;
+    }
+}
